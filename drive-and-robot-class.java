@@ -17,10 +17,10 @@ public class Drive {
 
     Drive(TalonFX talonL1, TalonFX talonL2, TalonFX talonR1, TalonFx talonR2) {
 
-        talonL1 = talonL1;
-        talonL2 = talonL2;
-        talonR1 = talonR1;
-        talonR2 = talonR2;
+        this.talonL1 = talonL1;
+        this.talonL2 = talonL2;
+        this.talonR1 = talonR1;
+        this.talonR2 = talonR2;
 
         // L2 follows L1
         talonL2.set(ControlMode.Follower, idL1);
@@ -55,8 +55,8 @@ public class Robot {
     Joystick joystickR = new Joystick(joystickRId);
 
     Robot(Joystick joystickL, Joystick joystickR) {
-        joystickL = joystickL;
-        joystickR = joystickR;
+        this.joystickL = joystickL;
+        this.joystickR = joystickR;
 
         Robot Drive;
 
