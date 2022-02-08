@@ -32,13 +32,13 @@ public class Drive {
 
         // negative turn value means right, positive turn value means left
         // negative throttle value means backward, positive throttle value means forward
-      if (Math.signum(throttle) > 0) {
+      if (throttle > 0) {
           talonL1.set(ControlMode.PercentOutput, (-throttle + turn)/2);
           talonR1.set(ControlMode.PercentOutput, (throttle + turn)/2);
-      } else if (Math.signum(throttle) == 0) {
+      } else if (throttle == 0) {
           talonL1.set(ControlMode.PercentOutput, 0);
           talonR1.set(ControlMode.PercentOutput, 0);
-      } else if (Math.signum(throttle) < 0) {
+      } else if (throttle < 0) {
           talonL1.set(ControlMode.PercentOutput, (throttle + turn)/2);
           talonR1.set(ControlMode.PercentOutput, (-throttle + turn)/2);
       }
